@@ -43,7 +43,7 @@ export default async function handler(req, res) {
     });
 
     const result = await agentResp.json();
-    const stored = result?.id ? true : false;
+    const stored = result?.message_id ? true : false;
 
     // Try to forward to Gmail
     let forwardStatus = 'skipped';
